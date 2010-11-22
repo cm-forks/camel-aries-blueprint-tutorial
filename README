@@ -1,0 +1,27 @@
+INSTALL FEATURES OF REPORTINCIDENT IN KARAF
+*******************************************
+
+features:addUrl mvn:org.apache.camel.example.reportincident/features-aries/1.0-SNAPSHOT/xml/features
+features:install reportincident
+
+Add Dynamic-Import for the commons-dbcp bundle
+**********************************************
+karaf@root> dev:dynamic-import 'bundleID'
+Enabling dynamic imports on bundle org.apache.commons.dbcp [bundleId]
+
+
+Check Web Service
+*****************
+http://localhost:8282/cxf/camel-example/incident?wsdl
+
+
+Copy the report.txt file into the folder /temp/data/reportincident/
+
+
+Control on the web site that the record has been created
+********************************************************
+http://localhost:8181/reportincidentweb/
+
+
+
+
